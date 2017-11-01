@@ -1,0 +1,3 @@
+
+@interface GKGenerateNewKeyCommand : NSScriptCommand
+@end

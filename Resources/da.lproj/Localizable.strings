@@ -1,0 +1,400 @@
+/* For Key-Status */
+"Invalid" = "Ugyldig";
+"Revoked" = "Tilbagekaldt";
+"Expired" = "Udløbet";
+"Disabled" = "Deaktiveret";
+"Unknown" = "Ukendt";
+"Marginal" = "Marginal";
+"Full" = "Fuld";
+"Ultimate" = "Ultimativ";
+
+
+
+/* Long key types */
+"Secret and public key" = "Privat og offentlig nøgle";
+"Public key" = "Offentlig nøgle";
+
+
+/* Key descriptions */
+"and" = "og";
+KeyDescriptionAndMore = "%1$@ og %2$lu mere";
+SecretAndPublicKeyListing = "Private nøgler:\n\n%@\n\nOffentlige nøgler:\n\n%@";
+
+
+/* For export, as standard File-Name. */
+"untitled" = "ingen titel";
+"%@ Revoke certificate" = "%@ tilbagekaldelsescertifikat";
+ExportKeysFilename = "%@ %u OpenPGP nøgler";
+ExportPublicKeyFilename = "%@ – Public";
+ExportSecretKeyFilename = "%@ – Secret";
+
+
+/* For key creation */
+CheckAlert_NoPassphrase_Title = "Intet kodeord";
+CheckAlert_NoPassphrase_Message = "Du har ikke angivet et kodeord. Dette kan ikke anbefales. Kodeord bør være mindst 8 tegn lange.";
+CheckAlert_NoPassphrase_Button1= "Fortsæt uden et kodeord";
+CheckAlert_NoPassphrase_Button2 = "Angiv nyt kodeord";
+CheckAlert_PassphraseShort_Title = "Kort kodeord";
+CheckAlert_PassphraseShort_Message = "Du har angivet et kort kodeord. Dette frarådes. Et kodeord bør være mindst 8 tegn langt.";
+CheckAlert_PassphraseShort_Button1= "Fortsæt med kort kodeord";
+CheckAlert_PassphraseShort_Button2 = "Angiv nyt kodeord";
+CheckAlert_PassphraseSimple_Title = "Simpelt kodeord";
+CheckAlert_PassphraseSimple_Message = "Det angivne kodeord er for simpelt. Et godt kodeord bør indeholde både bogstaver, tal og mindst et specialtegn.";
+CheckAlert_PassphraseSimple_Button1 = "Fortsæt med simpelt kodeord";
+CheckAlert_PassphraseSimple_Button2 = "Angiv nyt kodeord";
+CheckAlert_PassphraseTooLong_Title = "Kodeordet er for langt";
+CheckAlert_PassphraseTooLong_Message = "Det angivne kodeord er for langt. Angiv et kodeord med færre end 300 tegn.";
+
+
+MoveSecring_Msg = "Dine private nøgler ligger lige nu på \"%@\".\nAngiv en disk nedenfor for at flytte dine private nøgler til en anden disk.";
+
+/* For Key-Search */
+KeySearch_NoKeysFound_Title = "Ingen nøgler fundet";
+KeySearch_ImportResults_Title = "Import successful";
+FOUND_KEY_DESCRIPTION_FORMAT = "%@, %@ (%lu bit), oprettet: %@"; /* Format für die gefundenen Schlüssel vom Server. */
+SearchingKeys_Msg = "Vi leder efter matchende nøgler på nøgleserveren. Det tager muligvis et stykke tid, vent venligst.";
+
+GenerateKey_Progress = "Vi har brug for at generere en masse tilfældige bits. Det er en god idé at gøre noget imens (skriv på tastaturet i et program, bevæg musen, brug harddisken). Dette giver tilfældighedsgeneratoren bedre muligheder for at få tilstrækkelig entropi.";
+GenerateSubkey_Msg = "Add subkey to the following key:\n%@ %@";
+GenerateUserID_Msg = "Add email address (user ID) to the following key:\n%@ %@";
+GenerateSignature_Msg = "At signere en nøgle betyder, at du bekræfter, at nøglens ejer er den han/hun giver sig ud for at være.\nNår signaturer er uploadede kan de ses af andre.\nHvis du signerer Bobs nøgle, og din ven Alice ikke er sikker på, at Bob virkelig er Bob, kan Alice se din signatur i Bobs nøgle. Da Alice ved at din nøgle er troværdig, ved hun også at Bob sandsynligvis faktisk er Bob.\n\nDu er ved at signere denne nøgle:\n%@";
+GenerateUidSignature_Msg = "At signere et bruger ID betyder, at du bekræfter, at nøglens ejer er den han/hun giver sig ud for at være.\nNår signaturer er uploadede kan de ses af andre.\nHvis du signerer Bobs nøgle, og din ven Alice ikke er sikker på, at Bob virkelig er Bob, kan Alice se din signatur i Bobs nøgle. Da Alice ved at din nøgle er troværdig, ved hun også at Bob sandsynligvis faktisk er Bob.\n\nDu er ved at signere dette bruger ID:\n%@";
+ChangeExpirationDate_Msg = "Ændre udløbsdato for \"%@\", %@";
+ChangeSubkeyExpirationDate_Msg = "Ændre udløbsdato for \"%2$@\", %3$@\nUndernøgle: %1$@";
+
+GenerateKey_Error = "Ups, noget gik galt. Der var et problem med at lave din nøgle.";
+
+/* Message for incorrect Entries */
+CheckError_NameToLong = "Navnet er for langt!";
+CheckError_InvalidCharInName = "Ugyldigt tegn i navnet!\n\"<\" og \">\" må ikke bruges.";
+CheckError_InvalidEmail = "Ugyldig e-mail adresse!";
+CheckError_EmailToLong = "E-mail adressen er for lang!\nMaksimal længde er 254.";
+CheckError_InvalidCharInComment = "Ugyldigt tegn i kommentar!\n\"(\" og \")\" må ikke bruges.";
+CheckError_CommentToLong = "Kommentaren er for lang!";
+CheckError_NoKeyID = "Angiv et gyldigt nøgle ID!";
+CheckError_PassphraseMissmatch = "Dine kodeord er ikke ens!";
+
+
+/* Message on start, if there are any Problems */
+GPG_NOT_FOUND_TITLE = "GPG kunne ikke findes";
+GPG_NOT_FOUND_MESSAGE = "Ups, something went really wrong. It seems GPG is missing on your system. Please reinstall GPG Suite from \nhttps://www.gpgtools.org.";
+GPG_CONFIG_ERROR_TITLE = "GPG konfigurationsfejl";
+GPG_CONFIG_ERROR_MESSAGE = "Ups, something went wrong. GPG was found on your system but there seems to be a problem with the config file. Please contact us at \nhttps://gpgtools.tenderapp.com.\n\nDetails: %@";
+LIBMACGPG_NOT_FOUND_TITLE = "Libmacgpg blev ikke fundet";
+LIBMACGPG_NOT_FOUND_MESSAGE = "Libmacgpg was not found on your system. Please reinstall GPG Suite from \nhttps://www.gpgtools.org.";
+CODE_SIGN_ERROR_TITLE = "Someone tampered with your installation of GPG Keychain";
+CODE_SIGN_ERROR_MESSAGE = "To keep you safe, GPG Keychain will exit now!\n\nPlease reinstall GPG Suite from \nhttps://gpgtools.org to be sure you have an original version from us!";
+UNKNOWN_GPG_ERROR_TITLE = "Ukendt GPG fejl";
+UNKNOWN_GPG_ERROR_MESSAGE = "Ups, something went wrong. GPG thrown an unknown error. Please contact us at \nhttps://gpgtools.tenderapp.com.\n\nDetails: %@";
+
+
+
+/* Mail public key */
+MailKey_Subject = "Offentlig nøgle til %@";
+MailKey_Subject_Your = "Min offentlige nøgle til at sikre vores beskeder";
+MailKey_Message = "Hej,\n\nvedhæftet finder du den offentlige nøgle til\n\n%@\n\nDu kan bruge denne nøgle til at kryptere og sikre beskeder, når du skriver til %@.\n\nFor at bruge den skal du have et OpenPGP program på din computer. Nedenfor finder du en liste af mulige programmer til dit styresystem:\n\n%@\n\nImporter den offentlige nøgle i din lokale OpenPGP nøglering.\n\nVenlig hilsen";
+MailKey_Message_Your = "Hej,\n\nvedhæftet finder du min offentlige nøgle\n\n%@\n\nDu kan bruge denne nøgle til at kryptere og sikre vores beskeder.\n\nFor at bruge den skal du have et OpenPGP program på din computer. Nedenfor finder du en liste af mulige programmer til dit styresystem:\n\n%@\n\nImporter den offentlige nøgle i din lokale OpenPGP nøglering.\n\nJeg ser frem til at udveksle beskeder med dig, som andre ikke kan stikke næsen i.\n\nVenlig hilsen";
+MailKey_Message_Links = "macOS	https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin-setup-gpgtools-create-a-new-key-your-first-encrypted-mail\nLinux	https://ssd.eff.org/en/module/how-use-pgp-linux\nWindows	https://ssd.eff.org/en/module/how-use-pgp-windows-pc\niOS		https://itunes.apple.com/app/ipgmail/id430780873?mt=8\nAndroid	https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain";
+MailKey_Progress = "Opretter ny e-mail...";
+MailKey_Progress_Your = "Opretter ny e-mail...";
+MailKey_Error = "Ups, noget gik galt. Der var problemer med at eksportere din nøgle.";
+MAIL_KEY_INVALID_KEY_SELECTED_TITLE = "Unusable key selected";
+MAIL_KEY_INVALID_KEY_SELECTED_MESSAGE = "Du har valgt en ubrugelig nøgle. Sådanne nøgler kan ikke sendes via e-mail. Opdater nøglen fra nøgleserveren for at tjekke, om den er blevet opdateret.\n\nAlternativt kontakt nøglens ejer, og fortæl dem om nøglens tilstand.\n\n%@";
+
+
+/* A key was found in the pasteboard */
+PasteboardKeyFound_Title = "One or more keys were detected in your clipboard";
+PasteboardKeyFound_Msg = "%@\n\nVil du importere nøglerne?";
+PasteboardKeyFound_Yes = "Importér";
+PasteboardKeyFound_No = "Annuller";
+
+
+/* Those are abvious */
+No = "Nej";
+Error = "Fejl";
+Warning = "Advarsel";
+Cancel = "Annuller";
+"Apply to all" = "Anvend på alle";
+
+
+/* Warnings */
+RemoveUserID_Title = "Fjern bruger ID";
+RemoveUserID_Msg = "Du er ved at fjerne bruger ID %@ fra din nøgle %@. Hvis du fjerner dette bruger ID, kan du ikke længere bruge denne nøgle sammen med den tilknyttede e-mail konto i Mail.app.\n\nHvis nøglen med dette bruger ID er blevet uploadet til nøgleserverne bliver bruger ID'et ikke fjernet fra nøglen på nøgleserverne. Tilbagekald i stedet bruger ID'et og upload den opdaterede nøgle.";
+RemoveUserID_Yes = "Fjern bruger ID";
+RemoveUserID_No = "Annuller";
+
+RevokeUserID_Title = "Warning: You are about to revoke a user ID";
+RevokeUserID_Msg = "You are about to revoke the following user ID:\n\n%@ from your key %@\n\nOnce revoked, you will be unable to sign and encrypt messages using this user ID and others will not be able to encrypt messages to this user ID. The revoked user ID can still be used to decrypt emails and files, previously encrypted to it.\n\nIt is not recommended to delete it, but to keep it in your key in revoked state.\n\nAre you sure you want to revoke this user ID?";
+RevokeUserID_Yes = "Tilbagekald bruger ID";
+RevokeUserID_No = "Annuller";
+
+RemoveSubkey_Title = "Tilbagekald undernøgle";
+RemoveSubkey_Msg = "Advarsel! Fortsæt kun, hvis du virkelig ved, hvad du laver.\n\nHvis du fjerner en undernøgle kan det ødelægge al signering og dekryptering.\n\nHvis nøglen men denne undernøgle er blevet uploadet til nøgleserverne, bliver undernøglen ikke fjernet fra nøglen på nøgleserverne. Hvis dette er tilfældet skal du i stedet tilbagekalde undernøglen og uploade den opdaterede nøgle.";
+RemoveSubkey_Yes = "Tilbagekald undernøgle";
+RemoveSubkey_No = "Annuller";
+
+RevokeSubkey_Title = "Warning: You are about to revoke a subkey";
+RevokeSubkey_Msg = "Please only proceed if you really know what you are doing.\n\nRevoking a subkey can destroy the capability to sign using this subkey and others may no longer be able to encrypt messages to this subkey.\n\nOnce revoked, you will be unable to sign and encrypt messages using this subkey and others will not be able to encrypt messages to this subkey. The revoked subkey can still be used to decrypt emails and files, previously encrypted to it.\n\nIt is not recommended to delete it, but to keep it in your key in revoked state.\n\nAre you sure you want to revoke this subkey?";
+RevokeSubkey_Yes = "Tilbagekald undernøgle";
+RevokeSubkey_No = "Annuller";
+
+RevokeSignature_Title = "Tilbagekald signatur";
+RevokeSignature_Msg = "Tilbagekaldelse af din signatur vil markere den som tilbagekaldt. Brug denne mulighed, hvis du tror at nøglen er blevet stjålet fra ejeren, og at den oprindelige ejer ikke længere har nøglen under hans kontrol. Hvis du tidligere har uploadet din signatur til nøgleserverne skal du uploade den opdaterede nøgle til nøgleserverne, så andre bliver gjort opmærksomme på, at din signatur er blevet tilbagekaldt.";
+RevokeSignature_Yes = "Tilbagekald signatur";
+RevokeSignature_No = "Annuller";
+
+RemoveSignature_Title = "Fjern signatur";
+RemoveSignature_Msg = "Er du sikker på at du vil fjerne denne signatur? Signaturen vil kun blive fjernet lokalt. Den vil ikke og kan ikke fjernes fra nøglen på nøgleserverne. Tilbagekald i stedet din signatur, hvis du vil markere den som ugyldig.";
+RemoveSignature_Yes = "Fjern signatur";
+RemoveSignature_No = "Annuller";
+
+RemoveLastSelfSignature_Title = "Fjern sidste egen-signatur";
+RemoveLastSelfSignature_Msg = "Du er ved at fjerne den sidste egen-signatur fra bruger ID %@. Fortsæt kun, hvis du virkelig ved, hvad du laver.\n\nDenne signatur sikrer, at e-mail adresser, navn og beskrivelsen af et bruger ID kun kan ændres af dets ejer.\n\nHvis denne signatur mangler, kan andre ændre denne information, og der er ingen mulighed for at vide, om det er sket.";
+RemoveLastSelfSignature_Yes = "Fjern signatur";
+RemoveLastSelfSignature_No = "Annuller";
+
+RevokeLastSelfSignature_Title = "Fjern sidste egen-signatur";
+RevokeLastSelfSignature_Msg = "Du er ved at tilbagekalde den sidste egen-signatur fra bruger ID %@. Fortsæt kun, hvis du virkelig ved, hvad du laver.\n\nTilbagekaldelse af den sidste egen-signatur fra et bruger ID vil gøre bruger ID'et ubrugeligt. Du vil ikke længere kunne anvende bruger ID %@ i Mail.app til at signere e-mails. Andre kan ikke længere kryptere til e-mail adressen i dette bruger ID.";
+RevokeLastSelfSignature_Yes = "Tilbagekald signatur";
+RevokeLastSelfSignature_No = "Annuller";
+
+RevokeKey_Title = "Advarsel: Du er ved at tilbagekalde en nøgle";
+RevokeKey_Msg = "You are about to revoke the following key:\n\n%@\n\nOnce revoked, you will be unable to sign and encrypt messages using this key and others will not be able to encrypt messages to this key. The revoked key can still be used to decrypt emails and files, previously encrypted to it.\n\nIt is not recommended to delete it, but to keep it in GPG Keychain in revoked state.\n\nAre you sure you want to revoke this key?";
+RevokeKey_Yes = "Tilbagekald nøgle";
+RevokeKey_No = "Annuller";
+
+OpenWithGPGServices_Title = "The OpenPGP message you tried to import is not a key";
+OpenWithGPGServices_Msg = "Du kan videresende beskeden til GPGServices for at dekryptere eller verificere beskeden.";
+OpenWithGPGServices_Yes = "Åbn GPGServices";
+OpenWithGPGServices_No = "Annuller";
+
+FirstUploadForeignKey_Title = "Public key not allowed on key servers";
+FirstUploadForeignKey_Msg = "The following keys do not reside on the key servers:\n\n%@\n\nSome key owners intentionally do not upload their public key. In order to respect that decision, you can not upload this public key. In case you think this is an error, please get in touch with the key owner.";
+
+
+NewKeyWantToUpload_Title = "Your key was created successfully";
+NewKeyWantToUpload_Msg = "To make it easier for your friends and colleagues to find your public key and start communicating with you securely – encrypt messages for you and verify the authenticity of your messages – it is recommended to upload your public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
+NewKeyWantToUpload_Yes = "Upload Public Key";
+NewKeyWantToUpload_No = "No, Thanks!";
+
+NewUserIDWantToUpload_Title = "Your new email address (user ID) was added successfully";
+NewUserIDWantToUpload_Msg = "In order for others to be able to use your new email address (user ID), it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your updated public key?";
+NewUserIDWantToUpload_Yes = "Upload Public Key";
+NewUserIDWantToUpload_No = "No, Thanks!";
+
+NewSubkeyWantToUpload_Title = "You have successfully added a subkey";
+NewSubkeyWantToUpload_Msg = "In order for others to be able to use your new subkey, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
+NewSubkeyWantToUpload_Yes = "Upload Public Key";
+NewSubkeyWantToUpload_No = "No, Thanks!";
+
+ExpirationDateChangedWantToUpload_Title = "You have successfully changed the expiration date";
+ExpirationDateChangedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
+ExpirationDateChangedWantToUpload_Yes = "Upload Public Key";
+ExpirationDateChangedWantToUpload_No = "No, Thanks!";
+
+RevokedKeyWantToUpload_Title = "Your key was successfully revoked";
+RevokedKeyWantToUpload_Msg = "To make it easier for your friends and colleagues to learn about this new state of your key, it is recommended to upload your revoked public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please ensure you let your contacts using your public key know that it is now revoked and no longer to be used. You can email them the revoked public key so they can import it into their key manager.\n\nDo you want to upload your revoked public key?";
+RevokedKeyWantToUpload_Yes = "Upload Public Key";
+RevokedKeyWantToUpload_No = "No, Thanks!";
+
+RevokedUserIDWantToUpload_Title = "Your user ID was successfully revoked";
+RevokedUserIDWantToUpload_Msg = "To make it easier for your friends and colleagues to learn about this new state of your key, it is recommended to upload your public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please ensure you let your contacts using your public key know that the user ID is now revoked and no longer to be used. You can email them the updated public key so they can import it into their key manager.\n\nDo you want to upload your public key?";
+RevokedUserIDWantToUpload_Yes = "Upload Public Key";
+RevokedUserIDWantToUpload_No = "No, Thanks!";
+
+RevokedSubkeyWantToUpload_Title = "Your subkey was successfully revoked";
+RevokedSubkeyWantToUpload_Msg = "To make it easier for your friends and colleagues to learn about this new state of your subkey, it is recommended to upload your public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please ensure you let your contacts using your public key know that the subkey is now revoked and no longer to be used. You can email them the updated public key so they can import it into their key manager.\n\nDo you want to upload your public key?";
+RevokedSubkeyWantToUpload_Yes = "Upload Public Key";
+RevokedSubkeyWantToUpload_No = "No, Thanks!";
+
+
+
+
+
+/* Delete warnings */
+DeleteKey_Title = "Slet offentlig nøgle(r)";
+DeleteKey_Msg = "Du er ved at slette den følgende offentlige nøgle(r):\n\n%@\n\nEr du sikker på, at du vil slette denne offentlige nøgle(r)?";
+DeleteKey_Yes = "Slet nøgle(r)";
+DeleteKey_No = "Annuller";
+
+DeleteSecKey_Title = "Advarsel: Du er ved at slette private og offentlige nøgler";
+DeleteSecKey_Msg = "Du er ved at slette nøgler:\n\n%@\n\nSletning af en privat nøgle har store konsekvenser. Når nøglen er slettet, kan man ikke længere dekryptere beskeder med den. Dette angår alle beskeder, der blev krypteret med nøglen.\n\nVi anbefaler ikke at slette den.\n\nFor at fortælle andre, at denne nøgle ikke længere er i brug, bør du tilbagekalde nøglen i stedet for at slette den, og uploade den tilbagekaldte nøgle til nøgleserverne. Ellers kan andre stadig bruge denne nøgle til at kryptere beskeder til dig.";
+DeleteSecKey_Checkbox = " Yes, I want to delete my secret key and understand, that I will no longer\nbe able to decrypt any messages that were encrypted to this key.";
+DeleteSecKey_Yes = "Slet nøgle(r)";
+DeleteSecKey_SecOnly = "Slet kun privat nøgle(r)";
+DeleteSecKey_No = "Annuller";
+
+DeleteRevokedSecKey_Title = "Advarsel: Du er ved at slette tilbagekaldte nøglepar";
+DeleteRevokedSecKey_Msg = "Du er ved at slette følgende tilbagekaldte nøglepar:\n\n%@\n\nTilbagekaldte nøgler kan stadig dekryptere gamle beskeder krypteret til den nøgle.\n\nVi anbefaler ikke at slette den.";
+DeleteRevokedSecKey_Checkbox = " Yes, I want to delete my secret key and understand, that I will no longer\nbe able to decrypt any messages that were encrypted to this key.";
+DeleteRevokedSecKey_Yes = "Slet dit nøglepar";
+DeleteRevokedSecKey_SecOnly = "Slet kun privat nøgle(r)";
+DeleteRevokedSecKey_No = "Annuller";
+
+
+/* Bad key server */
+BadKeyserver_Title = "Dårlig nøgleserver";
+BadKeyserver_Msg = "Den angivne nøgleserver virker ikke.\nTjek nøgleserverens adresse. Den bør se ud som:\nhkp://some.key.server.org\n\nNøgleserveren kan også være offline. Hvis det er tilfældet, så prøv med en anden nøgleserver.";
+
+
+/* Import warnings */
+ImportRevSig_Title = "Importer tilbagekaldelsescertifikat";
+ImportRevSig_Msg = "Du er ved at importere et tilbagekaldelsescertifikat for %@. Hvis du tilbagekalder din nøgle, vil du ikke længere kunne signere beskeder med den nøgle, og andre vil ikke længere kunne sende beskeder til dig, der er krypterede med din nøgle. Overvej at uploade din tilbagekaldte nøgle til nøgleserveren, så andre bliver gjort opmærksom på, at din nøgle er blevet tilbagekaldt.\n\nDin tilbagekaldte nøgle kan stadig bruges til at dekryptere e-mails og filer, der er krypteret med din offentlige nøgle. Derfor anbefaler vi at du beholder den tilbagekaldte nøgle i GPG Nøglering.";
+ImportRevSig_Yes = "Importér";
+ImportRevSig_No = "Annuller";
+
+ImportRandomData_Title = "Warning: Content can probably not be imported";
+ImportRandomData_Msg = "Det ser ud til at du forsøger at importere en besked, der ikke er en OpenPGP nøgle.\n\nEr du sikker på at du vil forsøge at importere dette?";
+ImportRandomData_Yes = "Forsøg at importere";
+ImportRandomData_No = "Annuller";
+
+ImportNonImportable_Title = "Warning: Content can probably not be imported";
+ImportNonImportable_Msg = "Det ser ud til at du forsøger at importere en signeret eller krypteret besked.\n\nSådanne beskeder kan ikke importeres i GPG Nøglering.\n\nPrøv i stedet at dekryptere eller verificere beskeden med GPGServices.";
+ImportNonImportable_Yes = "Forsøg at importere";
+ImportNonImportable_No = "Annuller";
+
+
+
+/* Results */
+UploadSuccess_Title = "Successfully sent";
+UploadSuccess_Msg = "The following public keys have been sent to the key servers:\n\n%@\n\nPlease allow some time for the change to be synced across existing key servers.";
+
+ExportSuccess_Title = "Export successful";
+ExportSuccess_Msg = "The following keys were successfully exported:\n\n%@";
+
+
+/* For Import-Results */
+IMPORT_RESULT_NEW_KEY = "The following key was successfully imported:\n\n%@";
+IMPORT_RESULT_NEW_KEYS = "The following keys were successfully imported:\n\n%@";
+
+IMPORT_RESULT_NEW_USER_ID = "Et bruger id blev tilføjet nøglerne\n\n%@";
+IMPORT_RESULT_NEW_SIGNATURE = "En signatur blev tilføjet nøglerne\n\n%@";
+IMPORT_RESULT_NEW_SUBKEY = "En undernøgle blev tilføjet nøglerne\n\n%@";
+
+IMPORT_RESULT_COUNT_REVOCATION_CERTIFICATE = "1 tilbagekaldelsescertifikat blev importeret.";
+IMPORT_RESULT_COUNT_REVOCATION_CERTIFICATES = "%i tilbagekaldelsescertifikater blev importeret.";
+
+IMPORT_RESULT_ONE_PROCESSED_AND_X_IMPORTED = "1 nøgle blev behandlet og %i importeret.";
+IMPORT_RESULT_X_PROCESSED_AND_ONE_IMPORTED = "%i nøgler blev behandlet og 1 importeret.";
+IMPORT_RESULT_X_PROCESSED_AND_X_IMPORTED = "%1$i nøgler blev behandlet og %2$i importeret.";
+
+IMPORT_RESULT_NOTHING_IMPORTED = "No keys imported.";
+
+/* Errors */
+"Details:" = "Details:";
+ImportKeyError_Title = "Failed to import one or more keys";
+ImportKeyError_Msg = "Often keys cannot be imported due to a missing self-signature. Please visit \nhttps://gpgtools.tenderapp.com/kb/gpg-keychain-faq/can-not-import-key-due-to-missing-self-signature for more details and steps on how to resolve this problem.";
+ImportKeyErrorPGP_Title = "Import Failed";
+ImportKeyErrorPGP_Msg = "Det ser ud til at du forsøger at importere en krypteret eller signeret besked. For at dekryptere eller verificere sådanne beskedder skal du bruge GPGServices.";
+ImportKeyErrorNoPGP_Title = "Import failed";
+ImportKeyErrorNoPGP_Msg = "Det ser ud til at du forsøger at importere nogle ikke PGP-relaterede data, der ikke kan behandles.";
+
+NO_SECRET_KEY_TITLE = "No secret key found";
+NO_SECRET_KEY_MESSAGE = "Du skal bruge en privat nøgle til at udføre denne operation.";
+
+KeyserverSearchError_Title = "Searching for key failed";
+KeyserverSearchError_Msg = "Please repeat your search and see if it works then. Should the problem persist, file a support request via System Preferences > GPG Suite > Send Report. Please copy the entire error message into the description field and add the search term you used for your query. We recommend to include the debug log, since that provides additional helpful information to solve your problem.";
+
+
+
+/* In Main Window */
+"%i of %i keys listed" = "%i af %i nøgler vist";
+
+
+
+
+CIPHER_ALGO_NONE = "Ingen";
+CIPHER_ALGO_IDEA = "IDEA";
+CIPHER_ALGO_3DES = "3DES";
+CIPHER_ALGO_CAST5 = "CAST5";
+CIPHER_ALGO_BLOWFISH = "BLOWFISH";
+CIPHER_ALGO_AES = "AES";
+CIPHER_ALGO_AES192 = "AES192";
+CIPHER_ALGO_AES256 = "AES256";
+CIPHER_ALGO_TWOFISH = "TWOFISH";
+CIPHER_ALGO_CAMELLIA128 = "CAMELLIA128";
+CIPHER_ALGO_CAMELLIA192 = "CAMELLIA192";
+CIPHER_ALGO_CAMELLIA256 = "CAMELLIA256";
+DIGEST_ALGO_MD5 = "MD5";
+DIGEST_ALGO_SHA1 = "SHA1";
+DIGEST_ALGO_RMD160 = "RMD160";
+DIGEST_ALGO_SHA256 = "SHA256";
+DIGEST_ALGO_SHA384 = "SHA384";
+DIGEST_ALGO_SHA512 = "SHA512";
+DIGEST_ALGO_SHA224 = "SHA224";
+COMPRESS_ALGO_NONE = "Ingen";
+COMPRESS_ALGO_ZIP = "ZIP";
+COMPRESS_ALGO_ZLIB = "ZLIB";
+COMPRESS_ALGO_BZIP2 = "BZIP2";
+
+
+
+
+ExportKey_Progress = "Eksporterer nøgle...";
+ExportKey_Error = "Eksport af nøgle mislykkedes.";
+ImportKey_Progress  = "Importerer nøgle...";
+DeleteSecretKey_Progress = "Sletter privat nøgle...";
+DeleteKeys_Progress = "Sletter nøgle...";
+DeleteKeys_Error = "Sletning af nøgle mislykkedes.";
+ChangePassphrase_Progress = "Ændrer kodeord...";
+ChangePassphrase_Error = "Ændring af kodeord mislykkedes.";
+SetDisabled_Progress = "Aktiverer/deaktiverer nøgle...";
+SetDisabled_Error = "Aktivering/deaktivering af nøgle mislykkedes.";
+SetOwnerTrust_Progress = "Indstiller ejerfortrolighed...";
+SetOwnerTrust_Error = "Indstilling af ejerfortrolighed mislykkedes.";
+ChangeExpirationDate_Progress = "Ændrer udløbsdato...";
+ChangeExpirationDate_Error = "Ændring af udløbsdato mislykkedes.";
+SetAlgorithmPreferences_Progress = "Sætter algoritmeindstillinger...";
+SetAlgorithmPreferences_Error = "Algoritmeindstilling mislykkedes.";
+CleanKey_Progress = "Renser nøgle...";
+CleanKey_Error = "Rensning af nøgle mislykkedes.";
+MinimizeKey_Progress = "Minimerer nøgle...";
+MinimizeKey_Error = "Minimering af nøgle mislykkedes.";
+GenerateRevokeCertificateForKey_Progress = "Genererer tilbagekaldelsescertifikat...";
+GenerateRevokeCertificateForKey_Error = "Oprettelse af tilbagekaldelsescertifikat mislykkedes.";
+SearchKeysOnServer_Progress = "Søger efter nøgle...";
+SendKeysToServer_Progress = "Sender %@ til server...";
+SendKeysToServer_Error = "Afsendelse af nøgle mislykkedes.";
+RefreshKeysFromServer_Progress = "Opdaterer %@ fra server...";
+RefreshKeysFromServer_Error = "Fornyelse af nøgle mislykkedes.";
+AddSubkey_Progress = "Tilføjer undernøgle...";
+AddSubkey_Error = "Tilføjelse af undernøgle mislykkedes.";
+RemoveSubkey_Progress = "Fjerner undernøgle...";
+RemoveSubkey_Error = "Fjernelse af undernøgle mislykkedes.";
+RevokeSubkey_Progress = "Tilbagekalder undernøgle...";
+RevokeSubkey_Error = "Tilbagekaldelse af undernøgle mislykkedes.";
+AddUserID_Progress = "Tilføjer bruger ID...";
+AddUserID_Error = "Tilføjelse af bruger ID mislykkedes.";
+RemoveUserID_Progress = "Fjerner bruger ID...";
+RemoveUserID_Error = "Fjernelse af bruger ID mislykkedes.";
+SetPrimaryUserID_Progress = "Indstiller primært bruger ID...";
+SetPrimaryUserID_Error = "Indstilling af primært bruger ID mislykkedes.";
+RevokeUserID_Progress = "Tilbagekalder bruger ID...";
+RevokeUserID_Error = "Tilbagekaldelse af bruger ID mislykkedes.";
+AddPhoto_Progress = "Tilføjer billede...";
+AddPhoto_Error = "Tilføjelse af billede mislykkedes.";
+AddPhoto_SelectMessage = "Vælg foto...";
+RemovePhoto_Progress = "Fjerner billede...";
+RemovePhoto_Error = "Fjernelse af billede mislykkedes.";
+SetPrimaryPhoto_Progress = "Indstiller primært billede...";
+SetPrimaryPhoto_Error = "Indstilling af primært billede mislykkedes.";
+RevokePhoto_Progress = "Tilbagekalder billede...";
+RevokePhoto_Error = "Tilbagekaldelse af billede mislykkedes.";
+AddSignature_Progress = "Tilføjer signatur...";
+AddSignature_Error = "Tilføjelse af signatur mislykkedes.";
+RemoveSignature_Progress = "Fjerner signatur...";
+RemoveSignature_Error = "Fjernelse af signatur mislykkedes.";
+RevokeSignature_Progress = "Tilbagekalder signatur...";
+RevokeSignature_Error = "Fjernelse af signatur mislykkedes.";
+ReceiveKeysFromServer_Progress = "Modtager nøgler...";
+ReceiveKeysFromServer_Error = "Modtagelse af signaturer mislykkedes.";
+RevokeKey_Progress = "Tilbagekalder nøgle...";
+RevokeKey_Error = "Tilbagekaldelse af nøgle mislykkedes.";
+
+
+SendToKeyserver_MenuItem = "Send to Key Server";
+SendPublicKeyToKeyserver_MenuItem = "Send Public Key to Key Server";
+
+FilterNoResults = "The local search for '%@' has no results.";
+FilterNoResultsSecOnly = "The local search for '%@' has no results.\nConsider disabling the option to 'Show secret keys only' to expand the search.";
+
